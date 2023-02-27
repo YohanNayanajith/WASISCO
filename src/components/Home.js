@@ -3,6 +3,9 @@ import Sample from "./threeJs/Sample";
 import MainSection from "./mainSection/MainSection";
 import WasiscoImageSection from "./wasiscoImageSection/WasiscoImageSection";
 import Gallery from "./gallery/Gallery";
+import Footer from "./footer/Footer";
+import GetInTouch from "./getInTouch/GetInTouch";
+import NameCarousel from "./nameCarousel/NameCarousel";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -15,6 +18,9 @@ const Home = () => {
   const sponsers = useRef();
   const prices = useRef();
   const contact = useRef();
+  
+  const getInTouch = useRef();
+  const footer = useRef();
 
   //pop-up
 
@@ -43,6 +49,16 @@ const Home = () => {
       {/* <Sample /> */}
       <WasiscoImageSection reference={wasiscoImageSection}/>
       <Gallery reference={contact}/>
+
+      {/* Services */}
+
+      {/* Get In Touch */}
+      <GetInTouch reference={getInTouch}/>
+
+      {/* Footer */}
+      <Footer reference={footer}/>
+
+      <NameCarousel />
     </div>
   );
 };
