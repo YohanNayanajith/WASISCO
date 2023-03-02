@@ -6,6 +6,7 @@ import Gallery from "./gallery/Gallery";
 import Footer from "./footer/Footer";
 import GetInTouch from "./getInTouch/GetInTouch";
 import NameCarousel from "./nameCarousel/NameCarousel";
+import SecondSection from "./secondSection/SecondSection";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -18,6 +19,7 @@ const Home = () => {
   const sponsers = useRef();
   const prices = useRef();
   const contact = useRef();
+  const secondSection = useRef();
   
   const getInTouch = useRef();
   const footer = useRef();
@@ -59,6 +61,8 @@ const Home = () => {
       <Footer reference={footer}/>
 
       <NameCarousel />
+
+      <SecondSection reference={secondSection}/>
     </div>
   );
 };
