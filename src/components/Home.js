@@ -7,6 +7,7 @@ import Footer from "./footer/Footer";
 import GetInTouch from "./getInTouch/GetInTouch";
 import NameCarousel from "./nameCarousel/NameCarousel";
 import SecondSection from "./secondSection/SecondSection";
+import ServiceHeader from "./serviceHeader/ServiceHeader";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -65,6 +66,8 @@ const Home = () => {
       <Sample />
 
       <SecondSection reference={secondSection}/>
+
+      <ServiceHeader header={"Services"} headerNumber={"01"} />
     </div>
   );
 };

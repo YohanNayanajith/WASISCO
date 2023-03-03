@@ -1,0 +1,34 @@
+.service-header-main {
+  color: var(--white);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 98px;
+  background-color: blue;
+  padding-top: 100px;
+  align-items: center;
+  justify-content:baseline
+}
+
+.service-header-main-number {
+  position: relative;
+  
+  background-color: brown;
+}
+.service-header-main-number div {
+  color: var(--black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+.service-header-main-content {
+  background-color: blueviolet;
+  letter-spacing: 0.09em;
+
+  /* border: 3px solid #ffffff; */
+  -webkit-text-stroke: 3px var(--white);
+  -webkit-text-fill-color: var(--black);
+}
