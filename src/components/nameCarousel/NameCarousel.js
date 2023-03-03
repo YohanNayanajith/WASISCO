@@ -29,7 +29,7 @@ const NameCarousel = () => {
         <h1>&nbsp;WASISCO -</h1>
         <h1>&nbsp;WASISCO -</h1> */}
         {namesData.map((name,id)=>(
-          <h1>&nbsp;{"-"+name+"-"}&nbsp;</h1>
+          <h1>&nbsp;{"— "+name}&nbsp;</h1>
         ))}
         {/* <h1>----</h1> */}
       </Marquee>

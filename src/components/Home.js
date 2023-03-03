@@ -7,7 +7,10 @@ import Footer from "./footer/Footer";
 import GetInTouch from "./getInTouch/GetInTouch";
 import NameCarousel from "./nameCarousel/NameCarousel";
 import SecondSection from "./secondSection/SecondSection";
-import ServiceHeader from "./serviceHeader/ServiceHeader";
+import ServiceHeaderLeft from "./serviceHeaderLeft/ServiceHeaderLeft";
+import ServiceHeaderRight from "./serviceHeaderRight/ServiceHeaderRight";
+import CardCarousel from "./cardCarousel/CardCarousel";
+import RecentWorks from "./recentWorks/RecentWorks";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -63,11 +66,14 @@ const Home = () => {
 
       <NameCarousel />
 
-      <Sample />
+      {/* <Sample /> */}
 
       <SecondSection reference={secondSection}/>
 
-      <ServiceHeader header={"Services"} headerNumber={"01"} />
+      <ServiceHeaderLeft header={"SERVICES"} headerNumber={"01"} />
+      <CardCarousel />
+      <ServiceHeaderRight header={"RECENT WORKS"} headerNumber={"02"} />
+      <RecentWorks />
     </div>
   );
 };
