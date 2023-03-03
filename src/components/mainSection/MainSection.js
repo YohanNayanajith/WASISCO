@@ -52,7 +52,7 @@ const MainSection = ({
                 options={{ autoStart: true, loop: true }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("Proposal Submissions Coming Soon . . . ")
+                    .typeString("WASISCO Site Coming Soon . . . ")
                     .pauseFor(2500)
                     .deleteAll()
                     .start();

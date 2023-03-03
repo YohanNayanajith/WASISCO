@@ -62,6 +62,8 @@ const Home = () => {
 
       <NameCarousel />
 
+      <Sample />
+
       <SecondSection reference={secondSection}/>
     </div>
   );
