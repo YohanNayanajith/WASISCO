@@ -1,20 +1,32 @@
 .service-header-main {
+  display: flex;
+  flex-direction: row;
   color: var(--white);
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
   font-size: 80px;
   line-height: 98px;
-  background-color: blue;
-  padding-top: 100px;
+  /* background-color: blue; */
+  padding: 100px 0;
   align-items: center;
-  justify-content:baseline
+  justify-content: baseline;
 }
 
+.service-header-offset {
+  flex: 5%;
+}
 .service-header-main-number {
   position: relative;
-  
-  background-color: brown;
+  flex: 10%;
+  /* background-color: brown; */
+}
+.service-header-main-number img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  /* background-color: red; */
 }
 .service-header-main-number div {
   color: var(--black);
@@ -25,7 +37,8 @@
   text-align: left;
 }
 .service-header-main-content {
-  background-color: blueviolet;
+  flex: 85%;
+  /* background-color: blueviolet; */
   letter-spacing: 0.09em;
 
   /* border: 3px solid #ffffff; */
