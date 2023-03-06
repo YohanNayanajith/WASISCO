@@ -1,30 +1,57 @@
 import React from "react";
 import "./RecentWorks.css";
+import { recentWorkData } from "../../data/recentWorkData";
 
 const RecentWorks = () => {
-  return (
-    <section className="background-main-color">
-      <div className="recent-work-container">
-        <div className="recent-work-left">
-          <div className="recent-work-left-image">
-            <img
-              src="https://res.cloudinary.com/midefulness/image/upload/v1677872925/WASISCO/recentWork/Rectangle_6_m52vhl.png"
-              alt="recent-work"
-            />
-          </div>
+  const getParticularTags = (tag) => {
+    return (
+      <div key={tag.id} className="recent-work-tag-tag1">
+        {tag}
+      </div>
+    );
+  };
+
+  const getParticularContent = (recentWork) => {
+    return (
+      <div className="recent-work-right">
+        <div className="recent-work-right-header">{recentWork.header}</div>
+        <div className="recent-work-right-content">
+          {recentWork.description}
         </div>
-        <div className="recent-work-right">
-          <div className="recent-work-right-header">MESSANGER FOR ZASTA</div>
-          <div className="recent-work-right-content">
-            I’m With a background in design, I work closely with design focused
-            teams to build websites and microsites for
-          </div>
-          <div className="recent-work-tag">
-            <div className="recent-work-tag-tag1">Mobile App</div>
-            <div className="recent-work-tag-tag1">Mobile App</div>
-          </div>
+        <div className="recent-work-tag">
+          {recentWork.tags.map((tag, index) => {
+            return getParticularTags(tag);
+          })}
         </div>
       </div>
+    );
+  };
+
+  const getParticularImage = (imageUrl) => {
+    return (
+      <div className="recent-work-left">
+        <div className="recent-work-left-image">
+          <img src={imageUrl} alt="recent-work" />
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <section className="background-main-color">
+      {recentWorkData.map((recentWork, index) => {
+        return recentWork.left ? (
+          <div key={recentWork.id} className="recent-work-container">
+            {getParticularImage(recentWork.imageUrl)}
+            {getParticularContent(recentWork)}
+          </div>
+        ) : (
+          <div key={recentWork.id} className="recent-work-container">
+            {getParticularContent(recentWork)}
+            {getParticularImage(recentWork.imageUrl)}
+          </div>
+        );
+      })}
     </section>
   );
 };
