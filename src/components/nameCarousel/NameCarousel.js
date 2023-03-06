@@ -1,12 +1,13 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { namesData } from "../../data/nameData";
+import './NameCarousel.css';
 
 const NameCarousel = () => {
   return (
-    <div>
+    <section className="background-main-color">
       <Marquee
-        gradient={true}
+        gradient={false}
         speed={100}
         pauseOnHover={false}
         pauseOnClick={false}
@@ -29,11 +30,11 @@ const NameCarousel = () => {
         <h1>&nbsp;WASISCO -</h1>
         <h1>&nbsp;WASISCO -</h1> */}
         {namesData.map((name,id)=>(
-          <h1 key={id}>&nbsp;{"— "+name}&nbsp;</h1>
+          <h1 key={id} className="name-carousel">&nbsp;{"— "+name}&nbsp;</h1>
         ))}
         {/* <h1>----</h1> */}
       </Marquee>
-    </div>
+    </section>
   );
 };
 

@@ -2,15 +2,9 @@ import React from "react";
 import "../Common.css";
 import "./SecondSection.css";
 
-const SecondSection = ({ reference }) => {
-  return (
-    <section ref={reference} className="background-main-color">
-      <div className="container second-section-header">
-        <div className="justify-content-center second-section-container-second">
-          Every project made by wasisco team is created at the intersection
-          between design and technology, making the future — today
-        </div>
-      </div>
+const SecondSection = ({ reference, active }) => {
+  const imageSection = () => {
+    return (
       <div className="container second-section-container">
         <div className="col-12 col-sm-3 align-items-center second-section-container-image">
           <img
@@ -33,6 +27,28 @@ const SecondSection = ({ reference }) => {
           </div>
         </div>
       </div>
+    );
+  };
+  const titleSection = () => {
+    return (
+      <div className="container second-section-header">
+        <div className="justify-content-center second-section-container-second">
+          Every project made by wasisco team is created at the intersection
+          between design and technology, making the future — today
+        </div>
+      </div>
+    );
+  };
+  return (
+    <section ref={reference} className="background-main-color">
+      {active ? (
+        <div>
+          {titleSection()}
+          {imageSection()}
+        </div>
+      ) : (
+        <div>{imageSection()}</div>
+      )}
     </section>
   );
 };

@@ -1,0 +1,24 @@
+.find-more-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+.find-more-button-container img {
+    transition: background-color 2s ease-out 100ms;
+}
+.find-more-button-container img:hover {
+    background-color: #FF1493;
+}
+
+/* mobile view */
+
+@media (max-width: 450px) {
+    .find-more-button-container {
+        padding: 50px 0 80px;
+    }
+    .find-more-button-container img {
+        width: 40%;
+    }
+}

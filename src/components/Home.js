@@ -11,6 +11,11 @@ import ServiceHeaderLeft from "./serviceHeaderLeft/ServiceHeaderLeft";
 import ServiceHeaderRight from "./serviceHeaderRight/ServiceHeaderRight";
 import CardCarousel from "./cardCarousel/CardCarousel";
 import RecentWorks from "./recentWorks/RecentWorks";
+import FindMoreButton from "./findMoreButton/FindMoreButton";
+import HandShake from "./handShake/HandShake";
+import About from "./about/About";
+import OurTeam from "./ourTeam/OurTeam";
+import ContactTitleCarousel from "./contactTitleCarousel.js/ContactTitleCarousel";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -53,27 +58,40 @@ const Home = () => {
         contactClick={() => scrollToDiv(contact)}
       />
       {/* <Sample /> */}
-      <WasiscoImageSection reference={wasiscoImageSection}/>
-      <Gallery reference={contact}/>
+      {/* <WasiscoImageSection reference={wasiscoImageSection}/> */}
+      {/* <Gallery reference={contact}/> */}
 
       {/* Services */}
 
       {/* Get In Touch */}
-      <GetInTouch reference={getInTouch}/>
+      {/* <GetInTouch reference={getInTouch}/> */}
 
-      {/* Footer */}
-      <Footer reference={footer}/>
+      
 
       <NameCarousel />
 
       {/* <Sample /> */}
 
-      <SecondSection reference={secondSection}/>
+      <SecondSection reference={secondSection} active={true}/>
 
       <ServiceHeaderLeft header={"SERVICES"} headerNumber={"01"} />
       <CardCarousel />
       <ServiceHeaderRight header={"RECENT WORKS"} headerNumber={"02"} />
       <RecentWorks />
+      <FindMoreButton />
+      <NameCarousel />
+      <HandShake />
+      <ServiceHeaderLeft header={"BLOGS"} headerNumber={"03"} />
+      <ServiceHeaderRight header={"ABOUT"} headerNumber={"04"} />
+      <About />
+      <OurTeam />
+      <SecondSection reference={secondSection} active={false}/>
+      <ServiceHeaderLeft header={"CONTACT"} headerNumber={"05"} />
+      <ContactTitleCarousel />
+
+      {/* Footer */}
+      <Footer reference={footer}/>
+      
     </div>
   );
 };

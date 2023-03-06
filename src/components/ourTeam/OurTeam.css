@@ -1,0 +1,42 @@
+.our-team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  padding: 100px 0;
+}
+.our-team-content {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
+  letter-spacing: 0.09em;
+
+  color: var(--white);
+}
+.our-team-name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.09em;
+
+  color: #e2e2e2;
+}
+
+/* Mobile View */
+
+@media (max-width: 450px) {
+  .our-team-container {
+    padding: 80px;
+  }
+  .our-team-content {
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+  }
+  .our-team-name {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

@@ -20,3 +20,24 @@ export const namesData = [
     'WASISCO',
     'WASISCO'
 ]
+
+export const contactHeaderData = [
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+    'LET\'S TALK',
+    'CONTACT US',
+];

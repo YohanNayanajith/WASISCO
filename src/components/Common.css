@@ -1,5 +1,33 @@
 .background-main-color {
-    background-color: var(--black);
-    /* height: 100vh; */
-    /* width: 100vw; */
+  background-color: var(--black);
+  /* height: 100vh; */
+  /* width: 100vw; */
+}
+
+.our-team-background {
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 0%, 1) 0%,
+    hsla(301, 52%, 37%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 38%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(0, 0%, 0%, 1) 0%,
+    hsla(301, 52%, 37%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 38%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(0, 0%, 0%, 1) 0%,
+    hsla(301, 52%, 37%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 38%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#902E8E", GradientType=1 );
 }
