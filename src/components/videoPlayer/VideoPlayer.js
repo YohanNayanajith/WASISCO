@@ -18,7 +18,7 @@ const VideoPlayer = ({ reference }) => {
             }}
             height={"80vh"}
             width={"80vw"}
-            light={true}
+            // light={true}
           />
         </div>
         <div className="video-player-name-carousel">

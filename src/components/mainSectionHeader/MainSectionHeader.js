@@ -1,5 +1,6 @@
 import React from "react";
 import "./MainSectionHeader.css";
+import Typewriter from "typewriter-effect";
 
 const MainSectionHeader = () => {
   return (

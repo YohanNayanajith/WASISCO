@@ -1,0 +1,18 @@
+.hover-image img:hover {
+  animation: mymove 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 0px;
+    /* background-color: var(--light-purple); */
+    background-image: url("https://res.cloudinary.com/midefulness/image/upload/v1678118944/WASISCO/mainSection/readmore-text_oaf8mq.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+  }
+}

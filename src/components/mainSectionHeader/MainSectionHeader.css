@@ -12,6 +12,9 @@
   letter-spacing: 0.09em;
   padding: 0 100px 30px;
   color: #faf4fe;
+  -webkit-animation: fadeIn 3s;
+  animation: fadeIn 3s;
+  /* transition: opacity 1000ms ease-in; */
 }
 .main-section-header-button {
   padding-left: 100px;
@@ -27,6 +30,21 @@
   font-size: 28px;
   line-height: 37px;
   letter-spacing: 0.09em;
+}
+.main-section-header-button a:hover {
+  color: black;
+  animation: mymove 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 0px;
+    background-color: var(--light-purple);
+    color: var(--white);
+  }
 }
 .main-section-header-description {
   display: flex;
@@ -90,7 +108,7 @@
     color: #faf4fe;
     z-index: 99;
   }
-  
+
   .main-section-header-image {
     position: absolute;
     top: 50%;
