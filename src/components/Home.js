@@ -17,6 +17,7 @@ import About from "./about/About";
 import OurTeam from "./ourTeam/OurTeam";
 import ContactTitleCarousel from "./contactTitleCarousel.js/ContactTitleCarousel";
 import ServiceSecondSection from "./serviceSecondSection/ServiceSecondSection";
+import MainSectionHeader from "./mainSectionHeader/MainSectionHeader";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -59,6 +60,7 @@ const Home = () => {
         contactClick={() => scrollToDiv(contact)}
       />
       {/* <Sample /> */}
+      <MainSectionHeader />
       <VideoPlayer reference={videoPlayer}/>
       {/* <Gallery reference={contact}/> */}
 

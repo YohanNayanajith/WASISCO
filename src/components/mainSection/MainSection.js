@@ -3,6 +3,7 @@ import "./MainSection.css";
 import Typewriter from "typewriter-effect";
 import NavBar from "../navbar/Navbar";
 import Logo from "../../images/logo/wasisco.png";
+import MainSectionHeader from "../mainSectionHeader/MainSectionHeader";
 
 const MainSection = ({
   reference,
@@ -41,13 +42,9 @@ const MainSection = ({
           display={display}
           contactClick={contactClick}
         />
-        <div className="main-section-content">
-          <img className="white-logo" src={Logo} alt="" />
-
+        {/* <div className="main-section-content">
           <div className="clock-cnt">
-            {/* <div className="clock-text">Proposal submission ends in</div> */}
             <div className="clock-text">
-              {/* Proposal Submissions Coming Soon . . . */}
               <Typewriter
                 options={{ autoStart: true, loop: true }}
                 onInit={(typewriter) => {
@@ -59,9 +56,10 @@ const MainSection = ({
                 }}
               />
             </div>
-            {/* <Clock /> */}
+            <Clock />
           </div>
-        </div>
+        </div> */}
+        <MainSectionHeader />
       </div>
     </div>
   );
