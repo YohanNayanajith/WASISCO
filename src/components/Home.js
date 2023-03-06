@@ -60,7 +60,7 @@ const Home = () => {
         contactClick={() => scrollToDiv(contact)}
       />
       {/* <Sample /> */}
-      <MainSectionHeader />
+      {/* <MainSectionHeader /> */}
       <VideoPlayer reference={videoPlayer}/>
       {/* <Gallery reference={contact}/> */}
 
