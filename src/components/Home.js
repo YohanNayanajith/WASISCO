@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Sample from "./threeJs/Sample";
 import MainSection from "./mainSection/MainSection";
-import WasiscoImageSection from "./wasiscoImageSection/WasiscoImageSection";
+import VideoPlayer from "./videoPlayer/VideoPlayer";
 import Gallery from "./gallery/Gallery";
 import Footer from "./footer/Footer";
 import GetInTouch from "./getInTouch/GetInTouch";
@@ -22,7 +22,7 @@ const Home = () => {
   const scrollToDiv = (ref) =>
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
   const mainSection = useRef();
-  const wasiscoImageSection = useRef();
+  const videoPlayer = useRef();
   const timeline = useRef();
   const praposalSubmission = useRef();
   const whatTheySay = useRef();
@@ -50,7 +50,7 @@ const Home = () => {
       <MainSection
         reference={mainSection}
         mainSectionClick={() => scrollToDiv(mainSection)}
-        wasiscoImageSectionClick={() => scrollToDiv(wasiscoImageSection)}
+        videoPlayerClick={() => scrollToDiv(videoPlayer)}
         timelineClick={() => scrollToDiv(timeline)}
         praposalSubmissionClick={() => scrollToDiv(praposalSubmission)}
         whatTheySayClick={() => scrollToDiv(whatTheySay)}
@@ -59,7 +59,7 @@ const Home = () => {
         contactClick={() => scrollToDiv(contact)}
       />
       {/* <Sample /> */}
-      {/* <WasiscoImageSection reference={wasiscoImageSection}/> */}
+      <VideoPlayer reference={videoPlayer}/>
       {/* <Gallery reference={contact}/> */}
 
       {/* Services */}
@@ -69,7 +69,7 @@ const Home = () => {
 
       
 
-      <NameCarousel />
+      {/* <NameCarousel active={true} /> */}
 
       {/* <Sample /> */}
 
@@ -82,7 +82,7 @@ const Home = () => {
       <ServiceHeaderRight header={"RECENT WORKS"} headerNumber={"02"} />
       <RecentWorks />
       <FindMoreButton />
-      <NameCarousel />
+      <NameCarousel active={true} />
       <HandShake />
       <ServiceHeaderLeft header={"BLOGS"} headerNumber={"03"} />
       <ServiceHeaderRight header={"ABOUT"} headerNumber={"04"} />

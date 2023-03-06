@@ -1,0 +1,20 @@
+.video-player-container {
+  /* width: 100vw; */
+  padding: 0 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 1040px;
+  height: 672px; */
+  position: relative;
+}
+
+
+.video-player-name-carousel {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  /* text-align: left; */
+  width: 100%;
+}
