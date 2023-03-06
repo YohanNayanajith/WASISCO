@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 import Marquee from "react-fast-marquee";
-import CardCarouselComponent from './CardCarouselComponent';
+import CardCarouselComponent from "./CardCarouselComponent";
 
 const CardCarousel = () => {
   return (
     <div>
-        <Marquee
+      <Marquee
         gradient={false}
         speed={100}
-        pauseOnHover={false}
+        pauseOnHover={true}
         pauseOnClick={false}
         delay={0}
         play={true}
@@ -17,19 +17,20 @@ const CardCarousel = () => {
         // gradientColor={[25, 255, 25]}
       >
         <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
+        <CardCarouselComponent header={"CLIENTS"} number={"2600+"} />
+        <CardCarouselComponent header={"EXP"} number={"10+ Years"} />
+        <CardCarouselComponent header={"RATE"} number={"5.0(1244)"} />
         <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
+        <CardCarouselComponent header={"CLIENTS"} number={"2600+"} />
+        <CardCarouselComponent header={"EXP"} number={"10+ Years"} />
+        <CardCarouselComponent header={"RATE"} number={"5.0(1244)"} />
         <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
-        <CardCarouselComponent header={"PROJECTS"} number={"2600+"} />
+        <CardCarouselComponent header={"CLIENTS"} number={"2600+"} />
+        <CardCarouselComponent header={"EXP"} number={"10+ Years"} />
+        <CardCarouselComponent header={"RATE"} number={"5.0(1244)"} />
       </Marquee>
     </div>
-  )
-}
+  );
+};
 
-export default CardCarousel
+export default CardCarousel;

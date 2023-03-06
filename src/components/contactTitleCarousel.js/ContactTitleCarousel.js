@@ -5,7 +5,8 @@ import './ContactTitleCarousel.css'
 
 const ContactTitleCarousel = () => {
   return (
-    <section className="background-main-color">
+    // <section className="our-team-background">
+    <section className="background-main-color ">
       <Marquee
         gradient={false}
         speed={100}

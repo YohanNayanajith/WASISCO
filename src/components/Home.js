@@ -16,6 +16,7 @@ import HandShake from "./handShake/HandShake";
 import About from "./about/About";
 import OurTeam from "./ourTeam/OurTeam";
 import ContactTitleCarousel from "./contactTitleCarousel.js/ContactTitleCarousel";
+import ServiceSecondSection from "./serviceSecondSection/ServiceSecondSection";
 
 const Home = () => {
   const scrollToDiv = (ref) =>
@@ -75,6 +76,8 @@ const Home = () => {
       <SecondSection reference={secondSection} active={true}/>
 
       <ServiceHeaderLeft header={"SERVICES"} headerNumber={"01"} />
+      <Gallery />
+      <ServiceSecondSection />
       <CardCarousel />
       <ServiceHeaderRight header={"RECENT WORKS"} headerNumber={"02"} />
       <RecentWorks />
@@ -88,6 +91,7 @@ const Home = () => {
       <SecondSection reference={secondSection} active={false}/>
       <ServiceHeaderLeft header={"CONTACT"} headerNumber={"05"} />
       <ContactTitleCarousel />
+      <GetInTouch />
 
       {/* Footer */}
       <Footer reference={footer}/>

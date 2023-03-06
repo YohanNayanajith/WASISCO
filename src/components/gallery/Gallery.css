@@ -1,0 +1,26 @@
+.gallery-image-container {
+  display: flex;
+  flex-direction: column;
+}
+.gallery-card-component-container {
+  padding-bottom: 100px;
+  opacity: 0.3;
+}
+.gallery-container {
+  position: relative;
+}
+.gallery-card-component-content {
+  position: absolute;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 66px;
+  line-height: 90px;
+  color: #faf4fe;
+  z-index: 99;
+
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -65%);
+  text-align: left;
+}
