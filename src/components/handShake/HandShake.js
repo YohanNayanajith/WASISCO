@@ -3,7 +3,7 @@ import "./HandShake.css";
 
 const HandShake = () => {
   return (
-    <section className="background-main-color">
+    <section className="our-team-background">
       <div className="hand-shake-container">
         <div className="hand-shake-image">
           <img
