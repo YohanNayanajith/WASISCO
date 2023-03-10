@@ -1,0 +1,13 @@
+.mouse-tail {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 10px 10px 0 0;
+  transform-origin: bottom center;
+  transform: rotate(45deg);
+}
+.mouse-tail {
+  /* previous styles */
+  transition: transform 0.3s ease-out;
+}

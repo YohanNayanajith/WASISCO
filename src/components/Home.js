@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Sample from "./threeJs/Sample";
 import MainSection from "./mainSection/MainSection";
 import VideoPlayer from "./videoPlayer/VideoPlayer";
@@ -18,8 +18,13 @@ import OurTeam from "./ourTeam/OurTeam";
 import ContactTitleCarousel from "./contactTitleCarousel.js/ContactTitleCarousel";
 import ServiceSecondSection from "./serviceSecondSection/ServiceSecondSection";
 import MainSectionHeader from "./mainSectionHeader/MainSectionHeader";
+import "./mouseEffect/mouseEffect.css";
+import MouseTail from "./mouseTail/MouseTail";
 
 const Home = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [gradientColor, setGradientColor] = useState("red");
+
   const scrollToDiv = (ref) =>
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
   const mainSection = useRef();
@@ -31,7 +36,7 @@ const Home = () => {
   const prices = useRef();
   const contact = useRef();
   const secondSection = useRef();
-  
+
   const getInTouch = useRef();
   const footer = useRef();
 
@@ -46,8 +51,80 @@ const Home = () => {
   // const [openSuccess, setOpenSuccess] = React.useState(false);
   // const handleOpenSuccess = () => setOpenSuccess(true);
   // const handleCloseSuccess = () => setOpenSuccess(false);
+
+  // useEffect(()=>{
+  //   window.addEventListener("mousemove", function (e) {
+  //     var to_append = document.getElementsByClassName('loader-container')[0];
+  //     var all = document.getElementsByClassName('loader-container');
+
+  //     var parent_div = document.createElement('div');
+  //     parent_div.className = "loader-container";
+  //     var inner_div = document.createElement('div');
+  //     inner_div.className = "loader";
+  //     parent_div.appendChild(inner_div)
+  //     var d = document.body.appendChild(parent_div);
+
+  //     parent_div.style.left = (e.clientX - 50)+'px';
+  //     parent_div.style.top = (e.clientY - 50)+'px';
+
+  //     if(document.getElementsByClassName('loader-container').length > 50) {
+  //       document.body.removeChild(to_append)
+  //     }
+  //   });
+  // },[]);
+
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     setMousePosition({ x: event.clientX, y: event.clientY });
+  //   };
+
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     const maxScrollY = document.body.scrollHeight - window.innerHeight;
+  //     const percent = scrollY / maxScrollY;
+  //     const hue = percent * 360;
+  //     setGradientColor(`hsl(${hue}, 100%, 50%)`);
+  //   };
+
+  //   document.addEventListener("mousemove", handleMouseMove);
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     document.removeEventListener("mousemove", handleMouseMove);
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  const mouseEffectFunction = (e) => {
+    // window.addEventListener("mousemove", function (e) {
+    var to_append = document.getElementsByClassName("loader-container")[0];
+    var all = document.getElementsByClassName("loader-container");
+
+    var parent_div = document.createElement("div");
+    parent_div.className = "loader-container";
+    var inner_div = document.createElement("div");
+    inner_div.className = "loader";
+    parent_div.appendChild(inner_div);
+    var d = document.body.appendChild(parent_div);
+
+    parent_div.style.left = e.clientX - 50 + "px";
+    parent_div.style.top = e.clientY - 50 + "px";
+
+    if (document.getElementsByClassName("loader-container").length > 50) {
+      document.body.removeChild(to_append);
+    }
+    // });
+  };
+
   return (
-    <div>
+    <div
+    // className="mouse-tail"
+    // style={{
+    //   left: mousePosition.x,
+    //   top: mousePosition.y,
+    //   background: `radial-gradient(circle, ${gradientColor} 0%, transparent 70%)`,
+    // }}
+    >
       <MainSection
         reference={mainSection}
         mainSectionClick={() => scrollToDiv(mainSection)}
@@ -61,7 +138,8 @@ const Home = () => {
       />
       {/* <Sample /> */}
       {/* <MainSectionHeader /> */}
-      <VideoPlayer reference={videoPlayer}/>
+      {/* <VideoPlayer reference={videoPlayer} /> */}
+
       {/* <Gallery reference={contact}/> */}
 
       {/* Services */}
@@ -69,13 +147,11 @@ const Home = () => {
       {/* Get In Touch */}
       {/* <GetInTouch reference={getInTouch}/> */}
 
-      
-
       {/* <NameCarousel active={true} /> */}
 
       {/* <Sample /> */}
 
-      <SecondSection reference={secondSection} active={true}/>
+      <SecondSection reference={secondSection} active={true} />
 
       <ServiceHeaderLeft header={"SERVICES"} headerNumber={"01"} />
       <Gallery />
@@ -90,14 +166,14 @@ const Home = () => {
       <ServiceHeaderRight header={"ABOUT"} headerNumber={"04"} />
       <About />
       <OurTeam />
-      <SecondSection reference={secondSection} active={false}/>
+      <SecondSection reference={secondSection} active={false} />
       <ServiceHeaderLeft header={"CONTACT"} headerNumber={"05"} />
       <ContactTitleCarousel />
       <GetInTouch />
 
       {/* Footer */}
-      <Footer reference={footer}/>
-      
+      <Footer reference={footer} />
+      {/* <MouseTail /> */}
     </div>
   );
 };

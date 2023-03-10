@@ -1,6 +1,6 @@
-.App {
-  text-align: center;
-}
+/* .App {
+  position: relative;
+} */
 
 .App-logo {
   height: 40vmin;
@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+/* .mouse-tail {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 10px 10px 0 0;
+  transform-origin: bottom center;
+  transform: rotate(45deg);
+}
+.mouse-tail {
+  transition: transform 0.3s ease-out;
+} */
+
+section {
+  /* height: 100vh; */
+  /* display: flex; */
+  scroll-snap-align: start;
+}
+
+section > div {
+  scroll-snap-type: y mandatory;
+  /* overflow-y: scroll; */
+  /* height: 100vh; */
+}
+

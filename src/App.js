@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="app">
       {loading ? (
         <div
           style={{
